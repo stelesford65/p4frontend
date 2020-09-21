@@ -127,7 +127,7 @@
     }
 
     body{
-    background-image: url('images/sky.jpg');
+    background-image: url('../src/components/images/sky.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     }
