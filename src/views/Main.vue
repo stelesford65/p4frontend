@@ -120,7 +120,7 @@ this.getBlogEntry()
       const id = this.editid
 
       fetch(`https://stp4backend.herokuapp.com/api/blog_entry/${id}/`,{
-      method: 'patch',
+      method: 'PATCH',
       headers:{
         authorization: `JWT ${tokens.token}`,
         "Content-Type":"application/json"
