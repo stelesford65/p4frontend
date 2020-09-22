@@ -182,7 +182,7 @@ getPicture: function (){
       const id = this.editid
 
       fetch(`https://stp4backend.herokuapp.com/api/pictures/${id}/`,{
-      method: 'patch',
+      method: 'PATCH',
       headers:{
         authorization: `JWT ${tokens.token}`,
         "Content-Type":"application/json"
