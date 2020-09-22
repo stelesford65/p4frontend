@@ -28,23 +28,33 @@ export default {
     };
   },
 methods: {
-  handleLogin: function () {
-    fetch("http://127.0.0.1:8000/auth/users/login/", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        username: this.username,
-        password: this.password,
-      }),
-    })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data)
-          this.$emit('loggedIn', data);
-        });
-  },
+   handleLogin: function() {
+      fetch("https://stp4backend.herokuapp.com/auth/users/login/",  {
+        method: 'post',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body:JSON.stringify({
+          username: this.username,
+          password: this.password
+        }),
+      })
+      .then(response => {
+        if (response.status == 400) {
+          response.json()
+        } else {
+          return response.json()
+        }
+      })
+      .then(data => {
+        console.log('data', data)
+        if(data){
+          this.$emit('loggedIn', data)
+        } else {
+          alert('Incorrect Login')
+        }
+      })
+    },
 },
 };
 </script>

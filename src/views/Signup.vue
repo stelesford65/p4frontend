@@ -36,7 +36,7 @@ export default {
   },
 methods: {
   handleSignup: function () {
-    fetch("http://127.0.0.1:8000/auth/users/register/", {
+    fetch("https://stp4backend.herokuapp.com/auth/users/register/", {
       method: "post",
       headers: {
         "Content-Type": "application/json"

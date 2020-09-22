@@ -71,7 +71,7 @@ this.getBlogEntry()
     newBlogEntry: function(){
       const {tokens} = this.$route.query
       console.log(tokens)
-      fetch("http://127.0.0.1:8000/api/blog_entry/",{
+      fetch("https://stp4backend.herokuapp.com/api/blog_entry/",{
       method: 'post',
       headers:{
         authorization: `JWT ${tokens.token}`,
@@ -85,7 +85,7 @@ this.getBlogEntry()
     },
     getBlogEntry: function (){
       const {tokens} = this.$route.query
-    fetch("http://127.0.0.1:8000/api/blog_entry/",{
+    fetch("https://stp4backend.herokuapp.com/api/blog_entry/",{
       method: 'get',
       headers:{
         authorization: `JWT ${tokens.token}`
@@ -100,7 +100,7 @@ this.getBlogEntry()
       const {tokens} = this.$route.query
       const id = event.target.id
 
-      fetch(`http://127.0.0.1:8000/api/blog_entry/${id}/`,{
+      fetch(`https://stp4backend.herokuapp.com/api/blog_entry/${id}/`,{
       method: 'delete',
       headers:{
         authorization: `JWT ${tokens.token}`
@@ -119,7 +119,7 @@ this.getBlogEntry()
       const {tokens} = this.$route.query
       const id = this.editid
 
-      fetch(`http://127.0.0.1:8000/api/blog_entry/${id}/`,{
+      fetch(`https://stp4backend.herokuapp.com/api/blog_entry/${id}/`,{
       method: 'patch',
       headers:{
         authorization: `JWT ${tokens.token}`,
@@ -134,7 +134,7 @@ this.getBlogEntry()
      newPicture: function(){
       const {tokens} = this.$route.query
       console.log(tokens)
-      fetch("http://127.0.0.1:8000/api/pictures/",{
+      fetch("https://stp4backend.herokuapp.com/api/pictures/",{
       method: 'post',
       headers:{
         authorization: `JWT ${tokens.token}`,
@@ -148,7 +148,7 @@ this.getBlogEntry()
     },
 getPicture: function (){
       const {tokens} = this.$route.query
-    fetch("http://127.0.0.1:8000/api/pictures/",{
+    fetch("https://stp4backend.herokuapp.com/api/pictures/",{
       method: 'get',
       headers:{
         authorization: `JWT ${tokens.token}`
@@ -163,7 +163,7 @@ getPicture: function (){
       const {tokens} = this.$route.query
       const id = event.target.id
 
-      fetch(`http://127.0.0.1:8000/api/pictures/${id}/`,{
+      fetch(`https://stp4backend.herokuapp.com/api/pictures/${id}/`,{
       method: 'delete',
       headers:{
         authorization: `JWT ${tokens.token}`
@@ -181,7 +181,7 @@ getPicture: function (){
       const {tokens} = this.$route.query
       const id = this.editid
 
-      fetch(`http://127.0.0.1:8000/api/pictures/${id}/`,{
+      fetch(`https://stp4backend.herokuapp.com/api/pictures/${id}/`,{
       method: 'patch',
       headers:{
         authorization: `JWT ${tokens.token}`,

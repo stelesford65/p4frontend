@@ -22,7 +22,7 @@ export default {
     return{
       loggedIn: false,
       tokens: '',
-      URL:'http//localhost:8000'
+      URL:'https://stp4backend.herokuapp.com/'
     }
   },
   methods:{
