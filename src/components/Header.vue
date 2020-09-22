@@ -4,7 +4,7 @@
     <b-navbar>
         <template slot="brand">
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
-              <img class ="img1" src = "images/students.png">
+              <img class ="img1" src = "https://res.cloudinary.com/dju2f4kdt/image/upload/v1600768184/students_alyycy.png">
             </b-navbar-item>
         </template>
 
@@ -50,7 +50,7 @@ span.logo {
   font-size: 2em;
 }
 .img1{
-    width: 90px;
+    width: 50px;
     height: 50px;
         position: center;
     }
