@@ -50,8 +50,8 @@ span.logo {
   font-size: 2em;
 }
 .img1{
-    width: 70px;
-    height: 600px;
+    width: 90px;
+    height: 50px;
         position: center;
     }
 </style>
